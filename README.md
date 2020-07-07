@@ -1,27 +1,17 @@
 # QLTest
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
+This project was created by arswaw (Alex Otten).
 
-## Development server
+The goal is to use Angular Forms to add to a table which displays contacts.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The website is mobile-friendly, and adds a scroll to the table so that it doesn't overflow off the screen.
 
-## Code scaffolding
+It includes passing unit tests.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+I used a class to track the state of the form. I had to clone the formdata class in order to send it to the parent.
+If not, the class would eventually reflect the cleared form state.
 
-## Build
+The table works by reading incoming JSON and dynamically building the columns and rows. This is useful
+for a simple read-only table.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Thanks for reading.
