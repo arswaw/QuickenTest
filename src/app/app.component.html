@@ -1,0 +1,22 @@
+<div id="topNav">
+    <nav id="nav-main" class="nav-main">
+      <a href="#" class="nav-title noselect">QLTest</a> 
+    </nav> 
+</div><br>
+
+<!-- The MongoID takes up a lot of space. 
+Since we have to display all available information,
+we should at least make the table scroll so that it
+can be somewhat responsive.
+-->
+<div class="grid-container">
+  <div id="contactForm">
+    <contact-form (sendForm)="addNewContact($event)"></contact-form>
+  </div>
+  <div class="table-overflow">
+    <dynamic-table
+    [rows]="rows"
+    [columns]="columns"
+    ></dynamic-table>
+  </div>
+</div>

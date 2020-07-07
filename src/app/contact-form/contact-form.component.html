@@ -1,0 +1,96 @@
+<div class="container">
+    <h1>Hero Form</h1>
+    <small>All fields are required.</small>
+    <form 
+    (ngSubmit)="onSubmit();contactForm.reset()"
+    class="box" #contactForm="ngForm">
+        <div class="form-group">
+            <!-- First Name -->
+            <li class="list-group-item form">
+                <label for="name">First Name</label>
+            </li>
+            <li class="list-group-item form">
+                <input type="text" class="form-control" [(ngModel)]="model.firstName" name="firstName" id="firstName"
+                    required #firstName="ngModel">
+            </li>
+            <div [hidden]="firstName.valid || firstName.pristine" 
+                class="alert alert-danger">
+                First Name is required
+            </div>
+
+            <!-- Last Name -->
+            <li class="list-group-item form">
+                <label for="name">Last Name</label>
+            </li>
+            <li class="list-group-item form">
+                <input type="text" class="form-control" [(ngModel)]="model.lastName" name="lastName" id="lastName"
+                    required #lastName="ngModel">
+            </li>
+            <div [hidden]="lastName.valid || lastName.pristine" 
+                class="alert alert-danger">
+                Last Name is required
+            </div>
+
+            <!-- Company -->
+
+            <li class="list-group-item form">
+                <label for="name">Company</label>
+            </li>
+            <li class="list-group-item form">
+                <input type="text" class="form-control" [(ngModel)]="model.company" name="company" id="company"
+                    required #company="ngModel">
+            </li>
+            <div [hidden]="company.valid || company.pristine" 
+                class="alert alert-danger">
+                Company is required
+            </div>
+
+            <!-- Email -->
+            <li class="list-group-item form">
+                <label for="name">Email</label>
+            </li>
+            <li class="list-group-item form">
+                <input type="text" class="form-control" 
+                [(ngModel)]="model.email" name="email" id="email" 
+                required #email="ngModel" email>
+            </li>
+            <div [hidden]="email.valid || email.pristine" 
+                class="alert alert-danger">
+                Email needs to be in a valid format
+            </div>
+
+            <!-- Phone -->
+            <li class="list-group-item form">
+                <label for="name">Phone</label>
+            </li>
+            <li class="list-group-item form">
+                <input type="text" class="form-control" 
+                [(ngModel)]="model.phone" name="phone" id="phone" 
+                required #phone="ngModel">
+            </li>
+            <div [hidden]="phone.valid || phone.pristine" 
+                class="alert alert-danger">
+                Phone is required
+            </div>
+
+            <!-- Address -->
+            <li class="list-group-item form">
+                <label for="name">Address</label>
+            </li>
+            <li class="list-group-item form">
+                <input type="text" class="form-control" [(ngModel)]="model.address" name="address" id="address"
+                    required #address="ngModel">
+            </li>
+            <div [hidden]="address.valid || address.pristine" 
+                class="alert alert-danger">
+                Address is required
+            </div>
+        </div>
+
+
+        <button
+        [disabled]="!contactForm.form.valid"
+        type="submit" class="main block">Submit</button>
+
+    </form>
+</div>

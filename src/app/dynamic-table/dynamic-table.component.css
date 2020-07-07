@@ -1,0 +1,36 @@
+table {
+    position: relative;
+    border-collapse: collapse; 
+  }
+  
+  .dynamic {
+    background-color: white;
+    border: 2px solid black;
+    border-bottom: 4px solid black;
+    border-radius: 4px;
+    border-spacing: 0;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .dynamic td {
+    border-bottom: 1px solid black;
+  }
+  
+  .dynamic tr {
+    text-align: center;
+  }
+  
+  .dynamic tr:nth-child(even){background-color: #4b367c;color:white;}
+  .dynamic tr:nth-child(even):hover{background-color: #ff1919;}
+  
+  .dynamic tr:hover {background-color: #ddd;}
+  
+  .dynamic th {
+    text-align: center;
+    padding: 8px;
+    color: black;
+    position: sticky;
+    background-color: white;
+    top: -2px;
+  }
